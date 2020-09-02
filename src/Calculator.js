@@ -7,10 +7,10 @@ const Calculator = props => {
     const [value, setValue]= useState("0");
     const [memory, setMemory]= useState(null);
     const [operator,setOperator]= useState(null);
-    
 
     const handleButtonPress = content => () => {
         const num = parseFloat(value);
+
 
         if (content === "AC"){
             setValue("0");
@@ -146,33 +146,33 @@ const Calculator = props => {
                 <p>{result(value)}</p>
                 <div className="answer-box">TBD</div>
                 <div className="calc-row">
-                    <Button className="calc-button calc-button-top" content="AC" onButtonClick={handleButtonPress} type="function">AC</Button>
-                    <Button className="calc-button calc-button-top" content="+/-" onButtonClick={handleButtonPress} type="function">+/-</Button>
-                    <Button className="calc-button calc-button-top" content="%" onButtonClick={handleButtonPress} type="function">%</Button>
-                    <Button className="calc-button calc-button-op" content="/" onButtonClick={handleButtonPress} type="operator">/</Button>
+                    <button className="calc-button calc-button-top" content="AC" onClick={()=>{handleButtonPress("AC")}} type="function">AC</button>
+                    <button className="calc-button calc-button-top" content="+/-" onClick={()=>{handleButtonPress("+/-")}} type="function">+/-</button>
+                    <button className="calc-button calc-button-top" content="%" onClick={()=>{handleButtonPress("%")}} type="function">%</button>
+                    <button className="calc-button calc-button-op" content="/" onClick={()=>{handleButtonPress("/")}} type="operator">/</button>
                 </div>
                 <div className="calc-row">
-                    <Button className="calc-button" content="7">7</Button>
-                    <Button className="calc-button" content="8">8</Button>
-                    <Button className="calc-button" content="9">9</Button>
-                    <Button className="calc-button calc-button-op" content="x" onButtonClick={handleButtonPress} type="operator">x</Button>
+                    <button className="calc-button" content="7">7</button>
+                    <button className="calc-button" content="8">8</button>
+                    <button className="calc-button" content="9">9</button>
+                    <button className="calc-button calc-button-op" content="x" onClick={()=>{handleButtonPress("x")}} type="operator">x</button>
                 </div>
                 <div className="calc-row">
-                    <Button className="calc-button" content="4">4</Button>
-                    <Button className="calc-button" content="5">5</Button>
-                    <Button className="calc-button" content="6">6</Button>
-                    <Button className="calc-button calc-button-op" content="-" onButtonClick={handleButtonPress} type="operator">-</Button>
+                    <button className="calc-button" content="4">4</button>
+                    <button className="calc-button" content="5">5</button>
+                    <button className="calc-button" content="6">6</button>
+                    <button className="calc-button calc-button-op" content="-" onClick={()=>{handleButtonPress("-")}} type="operator">-</button>
                 </div>
                 <div className="calc-row">
-                    <Button className="calc-button" content="1">1</Button>
-                    <Button className="calc-button" content="2">2</Button>
-                    <Button className="calc-button" content="3">3</Button>
-                    <Button className="calc-button calc-button-op" content="+" onButtonClick={handleButtonPress} type="operator">+</Button>
+                    <button className="calc-button" content="1">1</button>
+                    <button className="calc-button" content="2">2</button>
+                    <button className="calc-button" content="3">3</button>
+                    <button className="calc-button calc-button-op" content="+" onClick={()=>{handleButtonPress("+")}} type="operator">+</button>
                 </div>
                 <div className="calc-row">
-                    <Button className="calc-button width-2" content="0">0</Button>
-                    <Button className="calc-button" content=".">.</Button>
-                    <Button className="calc-button calc-button-op" content="=" onButtonClick={handleButtonPress} type="operator">=</Button>
+                    <button className="calc-button width-2" content="0">0</button>
+                    <button className="calc-button" content=".">.</button>
+                    <button className="calc-button calc-button-op" content="=" onClick={()=>{handleButtonPress("=")}} type="operator">=</button>
                 </div>
             </div>
         </div>
