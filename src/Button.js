@@ -1,17 +1,17 @@
-import React from 'react'
+// import React from 'react'
 
 
 
-const Button = ({content, onButtonClick, type})=>{
+// const Button = ({content, onButtonClick, type})=>{
     
-    return(
-        <div
-        className={`Button ${content === "0" ? "zero" : ""} ${type || ""}`}
-        onClick={onButtonClick(content)}
-      >
-        {content}
-        </div>
-    )
-}
+//     return(
+//         <div
+//         className={`Button ${content === "0" ? "zero" : ""} ${type || ""}`}
+//         onClick={onButtonClick(content)}
+//       >
+//         {content}
+//         </div>
+//     )
+// }
 
-export default Button;
+// export default Button;
